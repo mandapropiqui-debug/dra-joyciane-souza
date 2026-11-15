@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dra. Joyciane Souza | Dentista e endodontista em Teresina-PI</title>
+<meta name="description" content="Dra. Joyciane Souza, cirurgiã-dentista e endodontista em Teresina-PI (CRO-PI 5963). Atendimento adulto e infantil com acolhimento. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#841C3C">
+<meta property="og:title" content="Dra. Joyciane Souza | Dentista e endodontista em Teresina-PI">
+<meta property="og:description" content="Cirurgiã-dentista e endodontista. Adulto e infantil. CRO-PI 5963.">
+<meta property="og:image" content="img/25-retrato-profissional.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":["Dentist","LocalBusiness"],"name":"Dra. Joyciane Souza","description":"Cirurgiã-dentista e endodontista em Teresina, Piauí. Atendimento adulto e infantil.","telephone":"+55 86 99451-4128","areaServed":{"@type":"City","name":"Teresina"},"medicalSpecialty":"Endodontics","image":"img/25-retrato-profissional.jpg","sameAs":["https://www.instagram.com/drajoyciane/"]},
+{"@type":"Person","name":"Joyciane Souza","jobTitle":"Cirurgiã-dentista e endodontista","identifier":"CRO-PI 5963","sameAs":["https://www.instagram.com/drajoyciane/"]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"A Dra. Joyciane atende crianças?","acceptedAnswer":{"@type":"Answer","text":"Sim. Ela atende adultos e crianças, com conversa e ritmo próprios para cada idade."}},
+{"@type":"Question","name":"O que faz um endodontista?","acceptedAnswer":{"@type":"Answer","text":"É o cirurgião-dentista especialista no interior do dente, como o tratamento de canal. A indicação depende de exame."}},
+{"@type":"Question","name":"Tenho medo de dentista. Posso conversar antes?","acceptedAnswer":{"@type":"Answer","text":"Pode. Você pode contar o que pesa pelo WhatsApp antes de marcar, e a conversa é feita sem pressa."}},
+{"@type":"Question","name":"Como agendar uma consulta?","acceptedAnswer":{"@type":"Answer","text":"Pelo WhatsApp (86) 99451-4128."}}]}]}
+</script>
+</head>
+<body>
+
+<!-- MENU -->
+<nav class="menu" id="menu" aria-label="Seções">
+  <a href="#inicio" data-s="inicio"><svg viewBox="0 0 256 256" data-ph="house"></svg><span>Início</span></a>
+  <a href="#consulta" data-s="consulta"><svg viewBox="0 0 256 256" data-ph="users-three"></svg><span>Consulta</span></a>
+  <a href="#portas" data-s="portas"><svg viewBox="0 0 256 256" data-ph="door-open"></svg><span>Portas</span></a>
+  <a href="#pace" data-s="pace"><svg viewBox="0 0 256 256" data-ph="sneaker-move"></svg><span>Pace</span></a>
+  <a href="#mito" data-s="mito"><svg viewBox="0 0 256 256" data-ph="seal-question"></svg><span>Mito</span></a>
+  <a href="#medo" data-s="medo"><svg viewBox="0 0 256 256" data-ph="chat-circle-dots"></svg><span>Medo</span></a>
+  <a href="#doutora" data-s="doutora"><svg viewBox="0 0 256 256" data-ph="heart"></svg><span>Doutora</span></a>
+  <a href="#contato" data-s="contato"><svg viewBox="0 0 256 256" data-ph="whatsapp-logo"></svg><span>Contato</span></a>
+</nav>
+<div class="progress"><i id="prog"></i></div>
+
+<canvas id="sparkle" aria-hidden="true"></canvas>
+
+<main id="app">
+
+<!-- 1 INÍCIO -->
+<section id="inicio" class="sec dark hero" data-name="inicio">
+  <div class="bg"><i class="conic"></i><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+  <div class="hero-top" id="heroTop">
+    <i class="halo"></i>
+    <div class="photo" id="photo"><img src="img/40-joyciane-nova.jpg" alt="Dra. Joyciane Souza, cirurgiã-dentista e endodontista" fetchpriority="high"><i class="shine"></i></div>
+    <h1 class="t"><span class="th">Seu sorriso merece</span> <em>calma</em></h1>
+    <div class="nome">Dra. <b>Joyciane</b></div>
+    <div class="chip"><b>Endodontista</b><br>CRO-PI 5963</div>
+  </div>
+  <div class="card" id="consulta" data-name="consulta">
+    <h2 class="t"><span class="thin">Para quem é</span> <b>a consulta?</b></h2>
+    <div class="seg" id="whoSeg" role="tablist" aria-label="Quem vai à consulta">
+      <button type="button" role="tab" data-who="adulto" aria-selected="true">Adulto</button>
+      <button type="button" role="tab" data-who="crianca" aria-selected="false">Criança</button>
+      <i class="seg-pill"></i>
+    </div>
+    <div class="chips" id="topicChips" aria-label="Assunto"></div>
+    <div class="roteiro" id="roteiro" aria-live="polite"><div class="r-empty">Escolha um assunto e receba perguntas para levar na conversa. Isso não é avaliação.</div></div>
+  </div>
+</section>
+
+<!-- 2 PORTAS -->
+<section id="portas" class="sec dark" data-name="portas">
+  <div class="bg"><i class="conic"></i><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+  <div class="wrap">
+    <h2 class="t rv"><span class="thin">As 7</span> <b>portas</b></h2>
+    <p class="lead rv">Toque em uma porta para ver o que ela já fez e como é cuidado cada tema.</p>
+    <div class="bars" id="bars"></div>
+    <a class="btn main rv" id="waMain" href="#" data-wa="Olá, Dra. Joyciane! Vim pelo seu Instagram e gostaria de agendar uma consulta."><svg viewBox="0 0 256 256" data-ph="whatsapp-logo"></svg><span>Agendar pelo WhatsApp</span><i class="shine"></i></a>
+  </div>
+</section>
+
+<!-- 3 PACE -->
+<section id="pace" class="sec light" data-name="pace">
+  <div class="bg"><i class="conic"></i><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+  <div class="wrap">
+    <h2 class="t rv"><span class="thin">O pace</span> <b>do sorriso</b></h2>
+    <p class="lead rv">Cada consulta é um trecho do caminho, feito no seu ritmo.</p>
+    <div class="route" id="route">
+      <svg class="route-svg" id="routeSvg" aria-hidden="true"><path id="routeBase"/><path id="routeFill"/><g id="runner"><circle r="16" class="halo"/><circle r="7" class="dot"/></g></svg>
+      <article class="km" data-km="0"><div class="kmc"><b class="n">km 0</b><h3>Avaliação</h3><p>Conversa e exame para entender o seu caso. Você pergunta tudo, sem pressa.</p></div></article>
+      <article class="km" data-km="1"><div class="kmc"><b class="n">km 1</b><h3>Plano</h3><p>Combinamos juntos o caminho, com as opções explicadas de forma clara.</p></div></article>
+      <article class="km" data-km="2"><div class="kmc"><b class="n">km 2</b><h3>Tratamento</h3><p>Feito no seu ritmo, com pausas combinadas quando você precisar.</p></div></article>
+      <article class="km" data-km="3"><div class="kmc"><b class="n">km 3</b><h3>Manutenção</h3><p>Retornos e cuidados para o sorriso seguir bem no dia a dia.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 MITO OU VERDADE -->
+<section id="mito" class="sec dark" data-name="mito">
+  <div class="bg"><i class="conic"></i><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+  <div class="wrap">
+    <h2 class="t rv"><span class="thin">Mito</span> <b>ou verdade?</b></h2>
+    <p class="lead rv">Arraste o cartão para a esquerda (mito) ou direita (verdade).</p>
+    <div class="deck rv" id="deck">
+      <div class="deck-stack" id="deckStack"></div>
+      <div class="deck-end" id="deckEnd" hidden></div>
+    </div>
+    <div class="deck-btns rv" id="deckBtns">
+      <button class="btn ghost" type="button" data-ans="mito">Mito</button>
+      <button class="btn solid" type="button" data-ans="verdade">Verdade</button>
+    </div>
+    <p class="score rv" id="score" aria-live="polite">Acertos: 0 de 0</p>
+  </div>
+</section>
+
+<!-- 6 TIRA-MEDO -->
+<section id="medo" class="sec light" data-name="medo">
+  <div class="bg"><i class="conic"></i><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+  <div class="wrap">
+    <h2 class="t rv"><span class="thin">Tira-</span><b>medo</b></h2>
+    <p class="lead rv">O que mais pesa para você? Escolha e a conversa começa.</p>
+    <div class="chat rv" id="chat" aria-live="polite"></div>
+    <div class="chips" id="fearChips"></div>
+    <div class="sr-only" id="fearAll"></div>
+  </div>
+</section>
+
+<!-- 7 DOUTORA -->
+<section id="doutora" class="sec dark" data-name="doutora">
+  <div class="bg"><i class="conic"></i><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+  <div class="wrap">
+    <h2 class="t rv"><span class="thin">A doutora</span> <b>que corre</b></h2>
+    <p class="lead rv">Cirurgiã-dentista e endodontista, Joyciane também corre provas de rua, como 10 km e meia maratona.</p>
+  </div>
+  <div class="strip s1" aria-hidden="true"><div class="trk" id="trk1"></div></div>
+  <div class="strip s2" aria-hidden="true"><div class="trk" id="trk2"></div></div>
+  <div class="wrap">
+    <div class="docs">
+      <figure class="rv"><img src="img/24-tcc-apresentacao.jpg" alt="Dra. Joyciane apresentando o trabalho de conclusão da especialização em Endodontia" loading="eager"><figcaption>Apresentação do trabalho de conclusão da especialização em Endodontia.</figcaption></figure>
+      <figure class="rv"><img src="img/27-certificado.jpg" alt="Certificado de curso de imersão em laserterapia" loading="eager"><figcaption>Certificado de curso de imersão em laserterapia.</figcaption></figure>
+    </div>
+    <div class="idcard rv"><b>Dra. Joyciane Souza</b><span>Cirurgiã-dentista</span><span>Endodontista</span><span>CRO-PI 5963</span></div>
+  </div>
+</section>
+
+<!-- 8 CONTATO -->
+<section id="contato" class="sec light last" data-name="contato">
+  <div class="bg"><i class="conic"></i><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+  <div class="wrap">
+    <h2 class="t rv"><span class="thin">Vamos</span> <b>conversar?</b></h2>
+    <p class="lead rv">Conte o que pesa e a gente combina o melhor momento.</p>
+    <a class="btn main big rv" href="#" data-wa="Olá, Dra. Joyciane! Gostaria de agendar uma consulta." data-ev="whatsapp_click"><svg viewBox="0 0 256 256" data-ph="whatsapp-logo"></svg><span>Chamar no WhatsApp</span><i class="shine"></i></a>
+    <a class="btn ghost-l rv" href="https://www.instagram.com/drajoyciane/?utm_source=biolink&utm_medium=bio&utm_campaign=contato" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" data-ph="instagram-logo"></svg><span>Instagram @drajoyciane</span></a>
+    <div class="cro rv"><b>CRO-PI 5963</b> · Cirurgiã-dentista · Endodontista · Teresina-PI</div>
+    <p class="legal rv">Este conteúdo é informativo e não substitui consulta com cirurgião-dentista.</p>
+  </div>
+</section>
+</main>
+
+<script src="icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
