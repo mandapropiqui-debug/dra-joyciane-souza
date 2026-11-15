@@ -191,11 +191,11 @@ CAPS.forEach((c, i) => {
   const n = nCasos(c);
   const count = c.id === 'perguntas' ? (c.qa.length + ' perguntas') : (n ? n + (n > 1 ? ' casos' : ' caso') : 'em breve');
   let body = '';
-  if (n) body += `<h4>Casos da Dra. Joyciane</h4><div class="cases">${CASOS[c.id].map(k => `<figure class="case"><img src="${k.img}" alt="${k.cap || 'Caso atendido pela Dra. Joyciane'}" loading="eager"><figcaption>${k.cap || ''}</figcaption></figure>`).join('')}</div><p class="disc">Resultados variam de pessoa para pessoa. Cada caso é avaliado individualmente.</p>`;
+  if (n) body += `<h4>Casos da Dra. Joyciane</h4><div class="cases">${CASOS[c.id].map(k => `<figure class="case"><img src="${k.img}" alt="${k.cap || 'Caso atendido pela Dra. Joyciane'}" loading="lazy" decoding="async"><figcaption>${k.cap || ''}</figcaption></figure>`).join('')}</div><p class="disc">Resultados variam de pessoa para pessoa. Cada caso é avaliado individualmente.</p>`;
   if (c.blocks) body += c.blocks.map(b => `<h4>${b[0]}</h4><p>${b[1]}</p>`).join('');
   if (c.qa) body += `<dl class="qa">${c.qa.map(q => `<div><dt>${q[0]}</dt><dd>${q[1]}</dd></div>`).join('')}</dl>`;
-  if (c.img) body += `<img src="${c.img[0]}" alt="${c.img[1]}" loading="eager">`;
-  if (c.cards) body += `<div class="cardrow">${c.cards.map(x => `<img src="${x}" alt="Dica de saúde bucal da Dra. Joyciane" loading="eager">`).join('')}</div>`;
+  if (c.img) body += `<img src="${c.img[0]}" alt="${c.img[1]}" loading="lazy" decoding="async">`;
+  if (c.cards) body += `<div class="cardrow">${c.cards.map(x => `<img src="${x}" alt="Dica de saúde bucal da Dra. Joyciane" loading="lazy" decoding="async">`).join('')}</div>`;
   body += `<a class="btn main" href="#" data-wa="Olá, Dra. Joyciane! ${c.msg}"><svg viewBox="0 0 256 256" data-ph="whatsapp-logo"></svg><span>Conversar pelo WhatsApp</span><i class="shine"></i></a>`;
   el.innerHTML = `<button class="bar-h" type="button" aria-expanded="false"><i class="shine"></i><span class="ic">${iconSvg(c.icon)}</span><h3>${nome}</h3><span class="count">${count}</span><span class="plus"></span></button><div class="bar-b"><div class="bar-in"><div class="bar-c">${body}</div></div></div>`;
   bars.append(el);
@@ -350,7 +350,7 @@ async function ask(k, btn) {
 /* ===== faixas da doutora ===== */
 const S1 = ['01-corrida-ponte', '02-corrida-torre', '04-10k-danca', '05-10k-bandeira-sentada', '06-10k-medalha-bandeira', '07-10k-medalha-selfie', '18-corrida-4358-a', '19-corrida-4358-b', '29-corrida-rosa-a', '33-10k-pulo', '20-trofeu-bpm', '03-corrida-parque'];
 const S2 = ['08-saojoao-retrato-jaqueta', '17-retrato-buque', '12-retrato-azul-festa', '15-rockinrio-grama', '14-rockinrio-logo', '10-saojoao-vestido-vinho', '21-viagem-mar-a', '22-viagem-praia', '23-viagem-mar-b', '31-10k-placa', '09-saojoao-noite', '16-rockinrio-sentada'];
-[['#trk1', S1], ['#trk2', S2]].forEach(([sel, list]) => { $(sel).innerHTML = [...list, ...list].map(n => `<img src="img/${n}.jpg" alt="" loading="eager">`).join(''); });
+[['#trk1', S1], ['#trk2', S2]].forEach(([sel, list]) => { $(sel).innerHTML = [...list, ...list].map(n => `<img src="img/t/${n}.jpg" alt="" loading="lazy" decoding="async">`).join(''); });
 
 /* ===== menu, progresso, seção atual ===== */
 const secs = $$('.sec, #consulta'), links = $$('.menu a'), prog = $('#prog');
