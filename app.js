@@ -348,8 +348,8 @@ async function ask(k, btn) {
 }
 
 /* ===== faixas da doutora ===== */
-const S1 = ['01-corrida-ponte', '02-corrida-torre', '04-10k-danca', '05-10k-bandeira-sentada', '06-10k-medalha-bandeira', '07-10k-medalha-selfie', '18-corrida-4358-a', '19-corrida-4358-b', '29-corrida-rosa-a', '33-10k-pulo', '20-trofeu-bpm', '03-corrida-parque'];
-const S2 = ['08-saojoao-retrato-jaqueta', '17-retrato-buque', '12-retrato-azul-festa', '15-rockinrio-grama', '14-rockinrio-logo', '10-saojoao-vestido-vinho', '21-viagem-mar-a', '22-viagem-praia', '23-viagem-mar-b', '31-10k-placa', '09-saojoao-noite', '16-rockinrio-sentada'];
+const S1 = ['02-corrida-torre', '01-corrida-ponte', '04-10k-danca', '19-corrida-4358-b', '03-corrida-parque'];
+const S2 = ['06-10k-medalha-bandeira', '29-corrida-rosa-a', '05-10k-bandeira-sentada', '33-10k-pulo', '31-10k-placa'];
 [['#trk1', S1], ['#trk2', S2]].forEach(([sel, list]) => { $(sel).innerHTML = [...list, ...list].map(n => `<img src="img/t/${n}.jpg" alt="" loading="lazy" decoding="async">`).join(''); });
 
 /* ===== menu, progresso, seção atual ===== */
